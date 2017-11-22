@@ -1,0 +1,23 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+var h1 = React.createElement('h1',{className:'header',key:'header'},
+    '中国古典文学（h1)');
+var p = React.createElement('p',{className:'content',key:'content'},
+    '红楼梦(p)');
+var createListItemElement = React.createFactory('li');
+var liItemEle1 = createListItemElement({className:'item-1',key:'item-1'},'第一回 甄士隐梦幻识通灵　贾雨村风尘怀闺秀');
+var liItemEle2 = createListItemElement({className:'item-2',key:'item-2'},'第二回 贾夫人仙逝扬州城　冷子兴演说荣国府');
+var liItemEle3 = createListItemElement({className:'item-3',key:'item-3'},'第三回 贾雨村夤缘复旧职　林黛玉抛父进京都');
+var liItemEle4 = createListItemElement({className:'item-4',key:'item-4'},'第四回 薄命女偏逢薄命郎　葫芦僧乱判葫芦案');
+var liItemEle5 = createListItemElement({className:'item-5',key:'item-5'},'第五回 游幻境指迷十二钗　饮仙醪曲演红楼梦');
+var reactFragmentLi = [liItemEle1,liItemEle2,liItemEle3,liItemEle4,liItemEle5];
+
+var ul = React.createElement('ul',{className:'list-of-item',key:'list-of-item'},reactFragmentLi);
+
+
+var reactFragment = [h1,p,ul];
+var section = React.createElement('section',{className:'container',key:'container'},
+    reactFragment);
+
+ReactDOM.render(section,  document.getElementById('react-application'));

@@ -1,0 +1,6 @@
+bower_componerts
+node_modules
+*~
+.DS_Store
+.ide
+credentials.js

@@ -1,0 +1,17 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+var h1 = React.createElement('h1',{className:'header',key:'header'},
+    '中国古典文学（h1)');
+
+var p = React.createElement('p',{className:'content',key:'content'},
+    '红楼梦(p)');
+
+var reactFragment = [h1,p];
+
+var section = React.createElement('section',{className:'container',key:'container'},
+    reactFragment);
+
+ReactDOM.render(section,
+    document.getElementById('react-application')
+);
